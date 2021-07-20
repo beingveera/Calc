@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Calculator</title>
+
+	<style type="text/css">
+
+	body{
+		background-color: #000024;
+	}
+		.block{
+			display: flex;
+			align-content: center;
+			justify-content: center;
+			margin-left: 30pc;
+			margin-top: 10pc;
+			border: 2px solid #000042;
+			width: 200px;
+			border-radius: 5px;
+		}
+		.inp{
+			height: 30px;
+			border: 2px solid #000042;
+			border-radius: 5px;
+			margin-top: 10px;
+			font-weight: bold;
+			color: #000024;
+			text-align: center;
+			text-shadow: 1px 1px .5px gray;
+			box-shadow: 1px 1px 5px;
+
+		}
+		.num{
+			margin-left:5px ;
+			border: 3px solid white;
+			height: 30px;
+			width: 50px;
+			font-size: 16px;
+			color: #000024;
+			font-weight: bold;
+			text-shadow: 1px 1px 1px gray;
+			cursor: pointer;
+			border-radius: 5px;
+		}
+		.num:hover{
+			transform: scale(.8);
+			color: red;
+			text-shadow: 4px gray;
+			box-shadow: 1px 1px 1px gray;
+		}
+		.oper{
+			margin-left:5px ;
+			border: 2px solid white;
+			height: 30px;
+			width: 50px;
+			font-size: 16px;
+			color: #000024;
+			font-weight: bold;
+			text-shadow: 1px 1px 1px gray;
+			cursor: pointer;
+			border-radius: 5px;
+		}
+			.oper:hover{
+			transform: scale(.8);
+			color: red;
+			text-shadow: 4px gray;
+			box-shadow: 1px 1px 1px gray;
+		}
+		.clear{
+			width: 170px;
+			margin-left:5px ;
+			border: 2px solid white;
+			height: 30px;
+			margin-bottom: 10px;
+			font-size: 16px;
+			color: #000024;
+			font-weight: bold;
+			text-shadow: 1px 1px 1px gray;
+			cursor: pointer;
+			border-radius: 5px;
+		}
+		.clear:hover{
+			transform: scale(.8);
+			color: red;
+			text-shadow: 4px gray;
+		}
+
+	</style>
+</head>
+<body>
+	<div class="block">
+	<form name="calc">
+		<input type="text" name="data" class="inp">
+		<br><br>
+		<input type="button" value=" 1 " onclick="calc.data.value +='1' " class="num">
+		<input type="button" value=" 2 " onclick="calc.data.value +='2' " class="num">
+		<input type="button" value=" 3 " onclick="calc.data.value +='3' " class="num">
+		<br><br>
+		<input type="button" value=" 4 " onclick="calc.data.value +='4' " class="num">
+		<input type="button" value=" 5 " onclick="calc.data.value +='5' " class="num">
+		<input type="button" value=" 6 " onclick="calc.data.value +='6' " class="num">
+		<br><br>
+		<input type="button" value=" 7 " onclick="calc.data.value +='7' " class="num">
+		<input type="button" value=" 8 " onclick="calc.data.value +='8' " class="num">
+		<input type="button" value=" 9 " onclick="calc.data.value +='9' " class="num">
+		<br><br>
+		<input type="button" value=" + " onclick="calc.data.value +='+' " class="oper">
+		<input type="button" value=" - " onclick="calc.data.value +='-' " class="oper">
+		<input type="button" value=" * " onclick="calc.data.value +='*' " class="oper">
+		<br><br>
+		<input type="button" value=" / " onclick="calc.data.value +='/' " class="oper">
+		<input type="button" value=" 0 " onclick="calc.data.value +='0' " class="num">
+		<input type="button" value=" = " onclick="calc.data.value = eval(calc.data.value)" class="oper">
+		<br><br>
+		<input type="button" value="Clear" onclick="calc.data.value =' ' " class="clear">
+	</form>
+	</div>
+
+</body>
+</html>
